@@ -16,7 +16,33 @@ let cliente3 = ["Dubian", "Joy", "chevrolet", 3103937621];
 cliente3.forEach(element => {
     console.log(element);
 });
-
+const client1 = {
+    cedula: 84562769,
+    Nombre: "Dubian",
+    Apellido: "Uriana",
+    Telefono: 3117478900,
+    Ciudad: "Riohacha"
+};
+console.log(`${client1.Nombre}, ${client1.Apellido}, ${client1.cedula}, ${client1.Telefono},
+${client1.Ciudad}`);
+const client2 = {
+    cedula: 40543678,
+    Nombre: "Jose",
+    Apellido: "Ocampo",
+    Telefono: 3234678942,
+    Ciudad: "Riohacha"
+};
+console.log(`${client2.Nombre}, ${client2.Apellido}, ${client2.cedula}, ${client2.Telefono},
+${client2.Ciudad}`);
+const client3 = {
+    cedula: 87543541,
+    Nombre: "sandra",
+    Apellido: "Daza",
+    Telefono: 3134678932,
+    Ciudad: "Riohacha"
+};
+console.log(`${client3.Nombre}, ${client3.Apellido}, ${client3.cedula}, ${client3.Telefono},
+${client3.Ciudad}`);
 function calcularDeudaconparametros(Pago, Precio) {
     Pago = 20000000;
     Precio = 40000290;
