@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital@1&display=swap');*{
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    height: 100%;
+}
+
+body {
+    font-family: 'lato', sans-serif;
+    font-size: 1.2rem;
+    min-height: 100%;
+}
+
+.fila1 {
+    height: 400px;
+}
+
+.fila2 {
+    height: 120px;
+}
+
+.fila3 {
+    height: 400px;
+}
+
+.logo {
+    background: white;
+}
+
+.titulo {
+    background: white;
+}
+
+.menu {
+    background: wheat;
+    font-size: xx-large;
+}
+
+.perfil {
+    background: blue;
+}
+
+.sidebar {
+    background: cadetblue;
+}
+
+.contenido {
+    background: rgb(0, 0, 0);
+    color: white
+}
+
+.aside {
+    background: lightslategray;
+}
+
+.grid-container > *{
+    text-align: center;
+}
+
+.grid-container {
+    display: grid;
+    grid-template: 
+    "header"    auto
+    "main"      auto
+    "navbar"    auto
+    "sidebar"   auto
+    ;
+}
