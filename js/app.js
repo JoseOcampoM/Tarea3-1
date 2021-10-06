@@ -53,3 +53,73 @@ let Pago = 20000000;
 let Precio = 40000290;
 const deuda = calcularDeudaconparametros(Precio, Pago);
 console.log(`la deuda es de ${deuda}`);
+let mostrarMarca = function (nom) {
+    console.log(`La Marca es ${nom}`);
+};
+mostrarMarca("Chevrolet");
+console.log(mostrarMarca);
+let mostrarNcliente = function (nom) {
+    console.log(`El nombre del cliente es ${nom}`);
+};
+mostrarNcliente("Pedro Suarez");
+console.log(mostrarNcliente);
+let Calcularprecio = (preciobase, IVA = 400000) => {
+    let s = 0;
+    if (IVA === undefined) {
+        s = preciobase;
+    }
+    else {
+        s = preciobase + IVA;
+    }
+    return s;
+};
+let sum = Calcularprecio(17804538, 2000000);
+console.log(sum);
+function Modeloprecio() {
+    return 2000000;
+}
+let mostrarModelo = function (Modelo, Precio = Modeloprecio()) {
+    console.info(`Modelo: ${Modelo} - Precio: ${Precio}`);
+    if (Precio == 2000000) {
+        console.warn("No se encuentra dicho modelo");
+    }
+};
+mostrarModelo("joy", 20000000);
+let duplicador = function (x) {
+    return x * 2;
+};
+let triplicador = function (x) {
+    return x * 3;
+};
+function sumarnum(f, y) {
+    return f(y) + 50;
+}
+console.log(sumarnum(duplicador, 10));
+console.log(sumarnum(triplicador, 40));
+let compra = {
+    nombrecliente: "sandra Daza",
+    Modelo: "colorao",
+    precio: 100000000,
+};
+console.log(compra);
+let compra1 = {
+    nombrecliente: "Luis Bolivar",
+    Modelo: "Beat",
+    precio: 40000000,
+};
+let compra2 = {
+    nombrecliente: "Juan Polo",
+    Modelo: "joy sedan",
+    precio: 44000000,
+};
+console.log(compra1);
+console.log(compra2);
+let compra3 = {
+    nombrecliente: "Luis Bolivar",
+    Modelo: "Beat",
+    precio: 40000000,
+    mostrarRecibo() {
+        return (`mi nombre es ${this.nombrecliente} - ${this.Modelo}`);
+    }
+};
+console.log(compra3.mostrarRecibo());

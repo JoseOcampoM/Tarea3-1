@@ -78,3 +78,68 @@ function calcularDeudaconparametros(Pago:number, Precio:number):number{
   let Precio:number=40000290;
   const deuda= calcularDeudaconparametros(Precio,Pago)
   console.log(`la deuda es de ${deuda}`);
+
+
+
+//objetos
+
+let compra: {
+     nombrecliente: string,
+     Modelo: string,
+     precio: number,
+      
+  } = {
+      nombrecliente:"sandra Daza",
+      Modelo:"colorao",
+      precio: 100000000,
+  
+ }
+  
+  console.log(compra);
+
+  //objetos Personalizada
+
+type Compras= {
+    nombrecliente: string,
+    Modelo: string,
+    precio: number, 
+}
+let  compra1: Compras= {
+    nombrecliente:"Luis Bolivar",
+    Modelo:"Beat",
+    precio: 40000000,
+}
+
+let compra2: Compras= {
+
+     nombrecliente:"Juan Polo",
+     Modelo:"joy sedan",
+     precio: 44000000,
+
+  }
+  console.log(compra1);
+  console.log(compra2);
+
+// interface
+
+  interface Recibo {
+    nombrecliente: string,
+    Modelo: string,
+    precio: number, 
+    mostrarRecibo:()=> string,
+}
+let  compra3: Recibo= {
+    nombrecliente:"Luis Bolivar",
+    Modelo:"Beat",
+    precio: 40000000,
+    mostrarRecibo(): string  {
+
+        return  (`mi nombre es ${this.nombrecliente} - ${this.Modelo}`)
+      }
+}
+  
+console.log(compra3.mostrarRecibo());
+
+
+
+
