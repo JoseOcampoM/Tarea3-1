@@ -206,4 +206,63 @@ console.log(compra3.mostrarRecibo());
 
 
 
+//CLASES
 
+class vehiculos {
+    Modelo:string;
+    Marca:string;
+    Precio:number;
+    
+    constructor(
+      Modelo: string,
+      Marca: string,
+      Precio: number,
+    ){
+      this.Modelo = Modelo;
+      this.Marca = Marca;
+      this.Precio = Precio;
+    }
+    
+    getmostrarvehiculos(): void {
+      console.log(`Modelo: ${this.Modelo}`)
+      console.log(`Marca: ${this.Marca}`)
+      console.log(`precio: ${this.Precio}`)
+  
+    }
+  
+  }
+  
+  
+  let vehiculo1= new vehiculos("onex turbo sedan", "chevrolet", 54000000)
+  
+  console.log (vehiculo1.getmostrarvehiculos());
+  
+  
+  class compravehiculo extends vehiculos {
+    pago: number;
+    valor: number;
+  
+    constructor(
+      Modelo: string,
+      Marca: string,
+      precio: number,
+      pago: number,
+      valor: number,
+    ){
+      super(Modelo,Marca,precio)
+      this.pago=pago;
+      this.valor=valor;
+    }
+  
+    getmostrarcompravehiculo(): void {
+      super.getmostrarvehiculos(); 
+      console.log(`pago: ${this.pago}`)
+      console.log(`valor: ${this.valor}`)
+    }
+  }
+  
+  
+  let compravehiculo1 = new compravehiculo("joy", "chevrolet",4000000, 2000000, 2000000)
+  console.log(compravehiculo1.getmostrarcompravehiculo())
+  
+  
