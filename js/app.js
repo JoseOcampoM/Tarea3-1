@@ -53,3 +53,35 @@ let Pago = 20000000;
 let Precio = 40000290;
 const deuda = calcularDeudaconparametros(Precio, Pago);
 console.log(`la deuda es de ${deuda}`);
+let mostrarMarca = function (nom) {
+    console.log(`La Marca es ${nom}`);
+};
+mostrarMarca("Chevrolet");
+console.log(mostrarMarca);
+let mostrarNcliente = function (nom) {
+    console.log(`El nombre del cliente es ${nom}`);
+};
+mostrarNcliente("Pedro Suarez");
+console.log(mostrarNcliente);
+let Calcularprecio = (preciobase, IVA = 400000) => {
+    let s = 0;
+    if (IVA === undefined) {
+        s = preciobase;
+    }
+    else {
+        s = preciobase + IVA;
+    }
+    return s;
+};
+let sum = Calcularprecio(17804538, 2000000);
+console.log(sum);
+function Modeloprecio() {
+    return 2000000;
+}
+let mostrarModelo = function (Modelo, Precio = Modeloprecio()) {
+    console.info(`Modelo: ${Modelo} - Precio: ${Precio}`);
+    if (Precio == 2000000) {
+        console.warn("No se encuentra dicho modelo");
+    }
+};
+mostrarModelo("joy", 20000000);

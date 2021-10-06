@@ -78,3 +78,52 @@ function calcularDeudaconparametros(Pago:number, Precio:number):number{
   let Precio:number=40000290;
   const deuda= calcularDeudaconparametros(Precio,Pago)
   console.log(`la deuda es de ${deuda}`);
+
+  // FUCIONES CON PARAMETROS
+
+  let mostrarMarca=function(nom: string){
+    console.log(`La Marca es ${nom}`)
+    }
+    
+    mostrarMarca("Chevrolet");
+    console.log(mostrarMarca);
+
+
+    let mostrarNcliente=function(nom: string){
+        console.log(`El nombre del cliente es ${nom}`)
+        }
+        
+        mostrarNcliente("Pedro Suarez");
+        console.log(mostrarNcliente);
+
+// FUNCIONES ANONIMAS
+
+let Calcularprecio=(preciobase:number, IVA:number=400000):number =>{
+    let s: number= 0;
+    if (IVA === undefined){
+        s = preciobase
+    } else{
+        s = preciobase+IVA
+    }
+    return s 
+};
+
+
+let sum:number = Calcularprecio(17804538,2000000); 
+console.log(sum);
+
+
+function Modeloprecio(){
+    return 2000000;
+}
+
+let mostrarModelo= function(Modelo: string, Precio: number=Modeloprecio()) {
+    console.info(`Modelo: ${Modelo} - Precio: ${Precio}`)
+
+    if (Precio == 2000000){
+
+        console.warn("No se encuentra dicho modelo")
+    } 
+}
+mostrarModelo("joy", 20000000);
+
